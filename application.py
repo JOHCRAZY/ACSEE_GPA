@@ -741,7 +741,7 @@ def handle_missing_values(df, reference_df):
     # Ensure we have the required columns, create them if missing
     default_values = {
         'PREV_SAT': 500,
-        'PREV_GPA': 3.0,
+        'PREV_GPA': 2.5,
         'SAT': 500,
         'STUDENT_TEACHER_RATIO': 15
     }
@@ -768,11 +768,11 @@ def handle_missing_values(df, reference_df):
     
     # Handle categorical missing values
     categorical_defaults = {
-        'SCHOOL OWNERSHIP': 'PUBLIC',
-        'SCHOOL CATEGORY': 'SECONDARY',
-        'SCHOOL TYPE': 'MIXED',
-        'COMBINATIONS CATEGORY': 'GENERAL',
-        'ACADEMIC LEVEL CATEGORY': 'ORDINARY'
+        'SCHOOL OWNERSHIP': 'GOVERNMENT',
+        'SCHOOL CATEGORY': 'BOYS AND GIRLS',
+        'SCHOOL TYPE': 'DAY AND BOARDING',
+        'COMBINATIONS CATEGORY': 'MIXED',
+        'ACADEMIC LEVEL CATEGORY': 'ALEVEL ONLY'
     }
     
     for col in categorical_cols:
