@@ -135,16 +135,15 @@ The Linear Regression model was selected over Random Forest (R²: 0.4323) and Gr
 ACSEE_GPA/
 ├── application.py                                    # Main Streamlit application
 ├── data/
-│   └── df.csv                               # ACSEE dataset (required)
+│   └── df.csv                                        # ACSEE dataset (required)
 ├── models/
-│   ├── linear_regression_pipeline.pkl       # Primary model (required)
-│   ├── random_forest_pipeline.pkl          # Alternative model
-│   └── gradient_boosting_pipeline.pkl      # Alternative model
-├── temp_data/                               # Temporary processing files
-├── .ipynb_checkpoints/                      # Jupyter notebook checkpoints
-├── requirements.txt                         # Python dependencies
-├── README.md                               # This documentation
-└── LICENSE                                 # MIT License
+│   ├── linear_regression_pipeline.pkl                # Primary model (required)
+│   ├── random_forest_pipeline.pkl                    # Alternative model
+│   └── gradient_boosting_pipeline.pkl                # Alternative model
+├── temp_data/                                        # Temporary processing files
+├── requirements.txt                                  # Python dependencies
+├── README.md                                         # This documentation
+└── LICENSE                                           # MIT License
 ```
 
 **Total Project Size**: ~20MB
@@ -180,22 +179,22 @@ The CSV file for batch predictions must include these columns (case-insensitive)
 
 | Column Name | Data Type | Valid Range/Values | Description |
 |-------------|-----------|-------------------|-------------|
-| `prev_sat` | Numeric | 1-676 | Number of candidates in previous examination |
-| `prev_gpa` | Numeric | 1.29-4.57 | Previous school GPA |
-| `sat` | Numeric | 1-645 | Number of candidates in current examination |
+| `prev_sat` | Numeric | - | Number of candidates in previous examination |
+| `prev_gpa` | Numeric | 1 - 5 | Previous school GPA |
+| `sat` | Numeric |  -  | Number of candidates in current examination |
 | `SCHOOL OWNERSHIP` | Categorical | PRIVATE, GOVERNMENT | School ownership type |
 | `SCHOOL CATEGORY` | Categorical | BOYS AND GIRLS, GIRLS ONLY, BOYS ONLY | Student gender composition |
 | `SCHOOL TYPE` | Categorical | BOARDING, DAY AND BOARDING, DAY | Accommodation type |
 | `COMBINATIONS CATEGORY` | Categorical | MIXED, ARTS, SCIENCE | Subject combinations offered |
 | `ACADEMIC LEVEL CATEGORY` | Categorical | COMBINED OA, ALEVEL ONLY | Academic level focus |
-| `STUDENTS` | Numeric | Optional | Total number of students |
-| `TEACHERS` | Numeric | Optional | Total number of teachers |
-| `STUDENT-TEACHER RATIO` | Numeric | Optional | Student-to-teacher ratio |
+| `STUDENTS` | Numeric |  -  | Total number of students |
+| `TEACHERS` | Numeric |  -  | Total number of teachers |
+| `STUDENT-TEACHER RATIO` |  Numeric | - | Student-to-teacher ratio |
 
 ### Data Distribution Statistics
 
 **Target Variable (GPA)**:
-- Range: 1.34 - 4.46
+- Range: 1.0 - 5.0
 - Mean: 2.51 ± 0.45
 - Distribution: Near-normal with slight right skew
 
