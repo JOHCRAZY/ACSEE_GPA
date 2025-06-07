@@ -1583,12 +1583,12 @@ def display_footer():
     
     with link_cols[0]:
         st.markdown(f"""
-            **📞 Contact Information**
-            - 📧 **Email:** johcrazy.magiha@gmail.com
-            - 🌐 **Project Lead:** Joseph Magiha
-            - 🏫 **Institution:** [Eastern Africe Statistical Training Centre](https://www.eastc.ac.tz)
-            - 📅 **Last Updated:** June 2025
-        """)
+        **📞 Contact & Project Information**
+        - 📧 **Email:** johcrazy.magiha@gmail.com
+        - 🏫 **Institution:** [Eastern Africa Statistical Training Centre](https://www.eastc.ac.tz)
+        - 💡 **Purpose:** Grade Point Average Prediction for Tanzania [ACSEE](https://www.necta.go.tz/pages/acsee) Schools
+        - 🛠️ **Built with:** [Python](https://www.python.org/) • [Streamlit](https://streamlit.io/)
+    """)
     
     with link_cols[1]:
         current_time = datetime.now()
