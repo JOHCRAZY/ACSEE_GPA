@@ -17,11 +17,11 @@ A professional Streamlit web application designed to predict Tanzania's Advanced
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🎯 Overview
+## Overview
 
 The ACSEE GPA Prediction Dashboard is a web-based tool built with Streamlit and Python, leveraging machine learning to predict Tanzania secondary school GPA based on previous academic performance, current examination data, and institutional characteristics. The application provides an intuitive interface for educators and administrators to assess school performance predictions with detailed data processing reports.
 
-## ✨ Features
+## Features
 
 ### Core Functionality
 - **Single Prediction**: Input individual school data to predict GPA with detailed results display
@@ -44,7 +44,7 @@ The ACSEE GPA Prediction Dashboard is a web-based tool built with Streamlit and 
 - **Export Functionality**: Download prediction results as CSV files
 - **Interactive Data Tables**: Sortable and searchable result displays
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.7 or higher
@@ -87,7 +87,7 @@ The ACSEE GPA Prediction Dashboard is a web-based tool built with Streamlit and 
 
 The application will open in your default web browser at `http://localhost:8501`.
 
-## 📖 Usage
+## Usage
 
 ### Single Prediction
 
@@ -115,7 +115,7 @@ The application will open in your default web browser at `http://localhost:8501`
    - Categorical analysis box plots
    - Download processed results
 
-## 📊 Model Performance
+## Model Performance
 
 The application uses a **Linear Regression** model selected for optimal performance on ACSEE data:
 
@@ -129,7 +129,7 @@ The application uses a **Linear Regression** model selected for optimal performa
 ### Model Comparison
 The Linear Regression model was selected over Random Forest (R²: 0.4323) and Gradient Boosting (R²: 0.4387) based on superior performance metrics and model interpretability for educational predictions.
 
-## 📁 File Structure
+## File Structure
 
 ```
 ACSEE_GPA/
@@ -148,7 +148,7 @@ ACSEE_GPA/
 
 **Total Project Size**: ~20MB
 
-## 📦 Dependencies
+## Dependencies
 
 Core dependencies for the ACSEE GPA Prediction Dashboard:
 
@@ -171,7 +171,7 @@ For complete environment setup:
 pip install -r requirements.txt
 ```
 
-## 📊 Data Requirements
+## Data Requirements
 
 ### Input Data Schema
 
@@ -183,12 +183,10 @@ The CSV file for batch predictions must include these columns (case-insensitive)
 | `prev_gpa` | Numeric | 1 - 5 | Previous school GPA |
 | `sat` | Numeric |  -  | Number of candidates in current examination |
 | `SCHOOL OWNERSHIP` | Categorical | PRIVATE, GOVERNMENT | School ownership type |
-| `SCHOOL CATEGORY` | Categorical | BOYS AND GIRLS, GIRLS ONLY, BOYS ONLY | Student gender composition |
-| `SCHOOL TYPE` | Categorical | BOARDING, DAY AND BOARDING, DAY | Accommodation type |
+| `SCHOOL CATEGORY` | Categorical | BOYS AND GIRLS, GIRLS ONLY, BOYS ONLY | School gender composition |
+| `SCHOOL TYPE` | Categorical | BOARDING, DAY AND BOARDING, DAY | School Accommodation type |
 | `COMBINATIONS CATEGORY` | Categorical | MIXED, ARTS, SCIENCE | Subject combinations offered |
-| `ACADEMIC LEVEL CATEGORY` | Categorical | COMBINED OA, ALEVEL ONLY | Academic level focus |
-| `STUDENTS` | Numeric |  -  | Total number of students |
-| `TEACHERS` | Numeric |  -  | Total number of teachers |
+| `ACADEMIC LEVEL CATEGORY` | Categorical | COMBINED OA, ALEVEL ONLY | SchoolAcademic level focus |
 | `STUDENT-TEACHER RATIO` |  Numeric | - | Student-to-teacher ratio |
 
 ### Data Distribution Statistics
@@ -218,7 +216,7 @@ prev_sat,prev_gpa,sat,SCHOOL OWNERSHIP,SCHOOL CATEGORY,SCHOOL TYPE,COMBINATIONS 
 - **Validation**: Comprehensive range validation with detailed error reporting
 - **Template Download**: Available within the application interface
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to improve the ACSEE GPA Prediction Dashboard! 
 
@@ -263,7 +261,7 @@ We welcome contributions to improve the ACSEE GPA Prediction Dashboard!
 - Mobile responsiveness
 - Internationalization (Swahili language support)
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for complete details.
 
@@ -278,7 +276,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### System Requirements
 - **Memory**: Minimum 4GB RAM recommended for optimal performance
@@ -318,16 +316,16 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-## 📞 Support & Contact
+## Support & Contact
 
 For questions, issues, or feature requests:
 
 - **GitHub Issues**: [Create an issue](https://github.com/JOHCRAZY/ACSEE_GPA/issues)
 - **Repository**: https://github.com/JOHCRAZY/ACSEE_GPA
-- **Documentation**: Available in repository README and code comments
+- **Documentation**: Available in repository [README](README) and code comments
 
 ---
 
-**Built for Tanzania's Educational Excellence using Streamlit and Machine Learning**
+**Built for Tanzania's ACSEE shcools using Streamlit and Machine Learning**
 
 *Supporting data-driven decisions in ACSEE school performance assessment*
