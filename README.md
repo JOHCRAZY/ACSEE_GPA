@@ -189,7 +189,7 @@ The CSV file for batch predictions must include these columns (case-insensitive)
 | `ACADEMIC LEVEL CATEGORY` | Categorical | COMBINED OA, ALEVEL ONLY | SchoolAcademic level focus |
 | `STUDENT-TEACHER RATIO` |  Numeric | - | Student-to-teacher ratio |
 
-### Data Distribution Statistics
+<!-- ### Data Distribution Statistics
 
 **Target Variable (GPA)**:
 - Range: 1.0 - 5.0
@@ -199,7 +199,7 @@ The CSV file for batch predictions must include these columns (case-insensitive)
 **Key Predictors**:
 - **Previous SAT**: 1-676 candidates (mean: 112)
 - **Current SAT**: 1-645 candidates (mean: 117)
-- **Student-Teacher Ratio**: 0.03-41.86 (mean: 16.03)
+- **Student-Teacher Ratio**: 0.03-41.86 (mean: 16.03) -->
 
 ### Sample Data Format
 
@@ -321,11 +321,12 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 For questions, issues, or feature requests:
 
 - **GitHub Issues**: [Create an issue](https://github.com/JOHCRAZY/ACSEE_GPA/issues)
-- **Repository**: https://github.com/JOHCRAZY/ACSEE_GPA
-- **Documentation**: Available in repository [README](README) and code comments
-
+- **Repository**: [ACSEE_GPA](https://github.com/JOHCRAZY/ACSEE_GPA)
+- **Documentation**: Available in repository [README](README.md) and code comments
+- **Email**: [JOHCRAZY](mailto:johcrazy.magiha@gmail.com)
+- **Project**: [ACSEE GPA Prediction dashboard](https://acsee.duckdns.org/)
 ---
 
 **Built for Tanzania's ACSEE shcools using Streamlit and Machine Learning**
 
-*Supporting data-driven decisions in ACSEE school performance assessment*
+*Supporting data-driven decisions in [ACSEE](https://www.necta.go.tz/pages/acsee) school performance assessment*

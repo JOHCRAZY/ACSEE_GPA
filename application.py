@@ -728,12 +728,7 @@ class GPAHistoryManager:
                 value=(float(1), float(5)),
                 step=0.1
             )
-        
-        # with filter_col3:
-        #     # School type filter
-        #     school_types = ['All'] + list(df['school_type'].unique())
-        #     selected_school_type = st.selectbox("School Type", school_types)
-        
+            
         # Apply filters
         filtered_df = df.copy()
         
@@ -751,9 +746,6 @@ class GPAHistoryManager:
             (filtered_df['predicted_gpa'] <= gpa_max)
         ]
         
-        # # School type filter
-        # if selected_school_type != 'All':
-        #     filtered_df = filtered_df[filtered_df['school_type'] == selected_school_type]
         
         # Limit to max entries
         display_df = filtered_df.head(max_entries)
@@ -769,7 +761,7 @@ class GPAHistoryManager:
                     if st.button("🗑️ Clear All History"):
                         st.session_state['show_clear_confirmation'] = True
                         clear = True
-                        # st.rerun()
+                        st.rerun()
             
             with bulk_col2:
                 if st.button("📥 Filtered (CSV)", help="Download filtered results as CSV"):
@@ -819,14 +811,14 @@ class GPAHistoryManager:
             
             # Select columns for display
             columns_to_show = [
-                'Date', 
-                'school_type', 'school_category', 'prev_gpa', 'sat', 'predicted_gpa', 'Confidence Range',
+                'Date', 'prev_sat', 'prev_gpa', 'sat', 'student_teacher_ratio',
+                'school_type', 'school_category','school_ownership','combinations_category','academic_level', 'predicted_gpa', 'Confidence Range',
             ]
             
             display_table = display_table[columns_to_show]
             display_table.columns = [
-                'Date & Time', 
-                'School Type', 'School Category', 'Previous GPA', 'SAT', 'Predicted GPA', 'Confidence Range',
+                'Date & Time', 'Previous SAT', 'Previous GPA', 'SAT', 'Student-teacher Ratio',
+                'School Type', 'School Category', 'School ownership', 'Combinations category', 'Academic level', 'Predicted GPA', 'Confidence Range',
             ]
             
             # Apply color coding using HTML
@@ -1485,7 +1477,7 @@ def display_contributors_modal():
         {
             "name": "Irene Bushiri",
             "role": "Member",
-            "email": None,
+            "email": "bushiriirene213@gmail.com",
             "contributions": ["Data Analysis", "Model Validation"],
             "github": None
         },
@@ -1498,7 +1490,7 @@ def display_contributors_modal():
         },
         {
             "name": "Ibrahim Kitupe",
-            "role": "Membert",
+            "role": "Member",
             "email": None,
             "contributions": ["Data acquisition", "model development"],
             "github": None
