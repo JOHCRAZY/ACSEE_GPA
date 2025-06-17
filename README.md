@@ -10,7 +10,6 @@ A professional Streamlit web application designed to predict Tanzania's Advanced
 - [Usage](#usage)
   - [Single Prediction](#single-prediction)
   - [Batch Prediction](#batch-prediction)
-- [Model Performance](#model-performance)
 - [File Structure](#file-structure)
 - [Dependencies](#dependencies)
 - [Data Requirements](#data-requirements)
@@ -97,6 +96,9 @@ The application will open in your default web browser at `http://localhost:8501`
    - **Previous GPA**: School's previous GPA performance
    - **Current SAT**: Number of candidates in current examination
    - **School Details**: Select ownership type, category, type, combinations, and academic level
+   - **studying_hours** - Average hours students study per week.
+   - **number_of_books** - Number of textbooks or resources available.
+   - **teacher_qualification** - Qualification level of teachers (e.g., Basic, Intermediate, Advanced).
    - **Student-Teacher Ratio**: Current ratio (if available)
 3. Click **"Generate GPA Prediction"** to view results
 4. Review the predicted GPA with confidence metrics
@@ -115,19 +117,6 @@ The application will open in your default web browser at `http://localhost:8501`
    - Categorical analysis box plots
    - Download processed results
 
-## Model Performance
-
-The application uses a **Linear Regression** model selected for optimal performance on ACSEE data:
-
-| Metric | Value | Description |
-|--------|-------|-------------|
-| **Test RMSE** | 0.2750 | Root Mean Square Error on test set |
-| **Test MAE** | 0.1939 | Mean Absolute Error on test set |
-| **Test R²** | 0.6739 | Coefficient of determination (67.39% variance explained) |
-| **CV RMSE** | 0.2990 | Cross-validation RMSE |
-
-### Model Comparison
-The Linear Regression model was selected over Random Forest (R²: 0.4323) and Gradient Boosting (R²: 0.4387) based on superior performance metrics and model interpretability for educational predictions.
 
 ## File Structure
 
@@ -189,17 +178,7 @@ The CSV file for batch predictions must include these columns (case-insensitive)
 | `ACADEMIC LEVEL CATEGORY` | Categorical | COMBINED OA, ALEVEL ONLY | SchoolAcademic level focus |
 | `STUDENT-TEACHER RATIO` |  Numeric | - | Student-to-teacher ratio |
 
-<!-- ### Data Distribution Statistics
 
-**Target Variable (GPA)**:
-- Range: 1.0 - 5.0
-- Mean: 2.51 ± 0.45
-- Distribution: Near-normal with slight right skew
-
-**Key Predictors**:
-- **Previous SAT**: 1-676 candidates (mean: 112)
-- **Current SAT**: 1-645 candidates (mean: 117)
-- **Student-Teacher Ratio**: 0.03-41.86 (mean: 16.03) -->
 
 ### Sample Data Format
 
