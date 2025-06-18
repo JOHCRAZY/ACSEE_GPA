@@ -269,7 +269,7 @@ def handle_missing_values(df, reference_df):
     missing_report = {}
     numerical_cols = ['PREV_SAT', 'PREV_GPA', 'SAT', 'STUDENT_TEACHER_RATIO', 'number_of_books', 'studying_hours']
     categorical_cols = ['SCHOOL OWNERSHIP', 'SCHOOL CATEGORY', 'SCHOOL TYPE',
-                       'COMBINATIONS CATEGORY', 'ACADEMIC LEVEL CATEGORY']
+                       'COMBINATIONS CATEGORY', 'ACADEMIC LEVEL CATEGORY', 'teacher_qualification']
     default_values = {
         'PREV_SAT': 400, 'PREV_GPA': 2.5, 'SAT': 300, 'STUDENT_TEACHER_RATIO': 15,
         'number_of_books': 500, 'studying_hours': 90
@@ -645,10 +645,15 @@ with tabs[0]:
             "Academic Level*", options=enhanced_df['ACADEMIC LEVEL CATEGORY'].unique(),
             help="Academic level of the school (e.g., A-Level)."
         )
+        descriptions = f""" 
+        _**Basic:**_  Represents lower qualifications (e.g., minimal training or experience).               
+        _**Intermediate:**_  Represents moderate qualifications (e.g., standard teaching credentials).            
+        _**Advanced:**_  Represents high qualifications (e.g., advanced degrees or extensive experience).
+        """
         options = ['Basic', 'Intermediate', 'Advanced']
         teacher_qualification = st.selectbox(
             "Teacher Qualification*", options=options,
-            help="Basic: Lower qualifications; Intermediate: Moderate qualifications; Advanced: High qualifications."
+            help=descriptions
         )
 
     inputs_valid = all([prev_sat > 0, 0 <= prev_gpa <= 5.0, sat > 0, student_teacher_ratio > 0])
